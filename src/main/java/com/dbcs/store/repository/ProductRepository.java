@@ -1,2 +1,7 @@
-package com.dbcs.store.repository;public interface ProductRepository {
+package com.dbcs.store.repository;
+
+import com.dbcs.store.model.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductRepository extends JpaRepository<Product, Integer> {
 }
