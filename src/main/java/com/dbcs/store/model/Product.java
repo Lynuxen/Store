@@ -23,10 +23,17 @@ public class Product {
     String name;
 
     @NotNull
+    ProductType type;
+
+    @NotNull
     Integer stock;
 
     @NotNull
     Boolean deleted = false;
+
+    @NotNull
+    Integer price;
+
 
     public Integer getId() {
         return id;
@@ -58,5 +65,13 @@ public class Product {
 
     public void setDeleted(Boolean deleted) {
         this.deleted = deleted;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
     }
 }

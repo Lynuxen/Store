@@ -14,7 +14,6 @@ public class ProductService {
     private final ProductRepository productRepository;
 
     public Product addProduct(Product product) {
-        System.out.println(product.getName());
         return productRepository.save(product);
     }
 
@@ -36,8 +35,8 @@ public class ProductService {
         Product aux = productRepository.findById(id).get();
         aux.setStock(stock);
         productRepository.save(aux);
-
     }
+
     public void deleteProduct(Integer id) {
         if (productRepository.findById(id).isEmpty()) {
             return;
@@ -68,5 +67,4 @@ public class ProductService {
         aux.setStock(aux.getStock() + 1);
         productRepository.save(aux);
     }
-
 }
